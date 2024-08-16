@@ -1,1 +1,12 @@
-
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+int nota1, nota2, me;
+    printf("Digite sua nota 1");
+    scanf("%d", &nota1);
+    printf("Digite sua nota 2");
+    scanf("%d", &nota2);
+    me=(nota1 + nota2)/2;
+    printf("sua média é %d", me);
+    return 0;
+} 
