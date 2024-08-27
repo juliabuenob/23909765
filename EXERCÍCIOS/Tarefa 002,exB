@@ -1,1 +1,27 @@
+#include <stdio.h>
 
+float calcular_saldo(float receita, float despesa) {
+    return receita - despesa;
+}
+int main() {
+    float receita, despesa, saldo;
+    
+    printf("Digite o valor da receita: ");
+    if (scanf("%f", &receita) != 1) {
+        printf("Erro: Por favor, insira um número válido para a receita.\n");
+        return 1; 
+    }
+    
+    printf("Digite o valor da despesa: ");
+    if (scanf("%f", &despesa) != 1) {
+        printf("Erro: Por favor, insira um número válido para a despesa.\n");
+        return 1; 
+    }
+
+    saldo = calcular_saldo(receita, despesa);
+    
+   
+    printf("Saldo Atualizado: R$%.2f\n", saldo);
+    
+    return 0; 
+}
