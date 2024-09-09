@@ -1,0 +1,21 @@
+#include ‹stdio.h>
+int maino {
+unsigned int n = 4000000000;
+printf("%u\n", n); 
+return ;
+｝
+
+
+#include ‹stdio.h>
+int main () {
+int a = 10; 
+printf ("%dIn", a);
+return 0;
+｝
+
+
+#include <stdio.h>
+int main () {
+printf ("%d ", 4); printf ("%d\n", 2);
+return 0;
+｝
