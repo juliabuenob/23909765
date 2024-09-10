@@ -1,0 +1,237 @@
+#include <stdio.h>
+
+int main() {
+    int a, b, c;
+
+    printf("Digite o primeiro número: ");
+    scanf("%d", &a);
+    printf("Digite o segundo número: ");
+    scanf("%d", &b);
+    printf("Digite o terceiro número: ");
+    scanf("%d", &c);
+
+    printf("Ordem inversa dos números digitados:\n");
+    printf("%d\n", c);
+    printf("%d\n", b);
+    printf("%d\n", a);
+
+    return 0;
+}
+
+
+#include <stdio.h>
+
+int main() {
+    char nome[100];
+
+    printf("Olá eu sou o Nº 1, como é seu nome?\n");
+    scanf("%s", nome);
+    printf("Bem-vindo ao clube %s!\n", nome);
+
+    return 0;
+}
+
+
+
+#include <stdio.h>
+
+int main() {
+    char nome[100];
+    int idade, dias_de_vida;
+
+    printf("Qual é o seu nome? ");
+    scanf("%s", nome);
+    printf("Quantos anos você tem? ");
+    scanf("%d", &idade);
+
+    dias_de_vida = idade * 365;
+    printf("%s, você tem aproximadamente %d dias de vida.\n", nome, dias_de_vida);
+
+    return 0;
+}
+
+
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    double raio, area;
+
+    printf("Qual é o raio do círculo? ");
+    scanf("%lf", &raio);
+
+    area = M_PI * raio * raio;
+    printf("A área do círculo é %.2f metros quadrados.\n", area);
+
+    return 0;
+}
+
+
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    double largura, altura, area_parede, total_tinta_necessaria;
+    const double CONSUMO_POR_M2 = 0.3; 
+    const double LITROS_POR_LATA = 2.0;
+
+    printf("Qual é a largura da parede em metros? ");
+    scanf("%lf", &largura);
+    printf("Qual é a altura da parede em metros? ");
+    scanf("%lf", &altura);
+
+    area_parede = largura * altura;
+    total_tinta_necessaria = area_parede * CONSUMO_POR_M2 / 1000; 
+    int latas_necessarias = ceil(total_tinta_necessaria / LITROS_POR_LATA);
+
+    printf("Você precisará de %d latas de tinta.\n", latas_necessarias);
+
+    return 0;
+}
+
+
+#include <stdio.h>
+
+int main() {
+    double fahrenheit, celsius;
+
+    printf("Digite a temperatura em Fahrenheit: ");
+    scanf("%lf", &fahrenheit);
+
+    celsius = (5.0 / 9.0) * (fahrenheit - 32);
+
+    printf("A temperatura em Celsius é: %.2f\n", celsius);
+
+    return 0;
+}
+
+#include <stdio.h>
+
+int main() {
+    double pressao, volume, temperatura, massa;
+
+    
+    printf("Digite a pressão (P) em atmosferas: ");
+    scanf("%lf", &pressao);
+    printf("Digite o volume (V) em litros: ");
+    scanf("%lf", &volume);
+    printf("Digite a temperatura (T) em graus Fahrenheit: ");
+    scanf("%lf", &temperatura);
+
+    temperatura = (temperatura - 32) * (5.0 / 9.0) + 273.15;
+
+    
+    massa = (pressao * volume) / (0.37 * (temperatura + 460));
+
+  
+    printf("A massa de ar do pneu é: %.2f kg\n", massa);
+
+    return 0;
+}
+
+#include <stdio.h>
+
+int main() {
+    int primeiro_termo, razao, n, n_termo;
+
+    
+    printf("Digite o primeiro termo da PA: ");
+    scanf("%d", &primeiro_termo);
+    printf("Digite a razão da PA: ");
+    scanf("%d", &razao);
+    printf("Digite o número N: ");
+    scanf("%d", &n);
+
+    n_termo = primeiro_termo + (n - 1) * razao;
+
+ 
+    printf("O %dº termo da PA é: %d\n", n, n_termo);
+
+    return 0;
+}
+
+
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    double a, b, c;
+    double discriminante, raiz1, raiz2;
+
+ 
+    printf("Digite o coeficiente a: ");
+    scanf("%lf", &a);
+    printf("Digite o coeficiente b: ");
+    scanf("%lf", &b);
+    printf("Digite o coeficiente c: ");
+    scanf("%lf", &c);
+
+ 
+    discriminante = b * b - 4 * a * c;
+
+    if (discriminante > 0) {
+     
+        raiz1 = (-b + sqrt(discriminante)) / (2 * a);
+        raiz2 = (-b - sqrt(discriminante)) / (2 * a);
+        printf("As raízes são: %.2f e %.2f\n", raiz1, raiz2);
+    } else if (discriminante == 0) {
+        // Uma raiz real
+        raiz1 = -b / (2 * a);
+        printf("A raiz é: %.2f\n", raiz1);
+    } else {
+       
+        printf("A equação não possui raízes reais.\n");
+    }
+
+    return 0;
+}
+
+
+#include <stdio.h>
+
+int main() {
+    int notas_1, notas_10, notas_50, notas_100;
+    int total;
+
+ 
+    printf("Digite a quantidade de notas de 1 real: ");
+    scanf("%d", &notas_1);
+    printf("Digite a quantidade de notas de 10 reais: ");
+    scanf("%d", &notas_10);
+    printf("Digite a quantidade de notas de 50 reais: ");
+    scanf("%d", &notas_50);
+    printf("Digite a quantidade de notas de 100 reais: ");
+    scanf("%d", &notas_100);
+
+    total = (notas_1 * 1) + (notas_10 * 10) + (notas_50 * 50) + (notas_100 * 100);
+
+    printf("O valor total em dinheiro é: %d reais\n", total);
+
+    return 0;
+}
+
+
+#include <stdio.h>
+
+int main() {
+    int valor, notas_1, notas_5, notas_10, notas_50, notas_100;
+
+    // Pergunta o valor total
+    printf("Digite o valor total em reais: ");
+    scanf("%d", &valor);
+
+    // Calcula a quantidade de notas
+    notas_100 = valor / 100;
+    valor %= 100;
+
+    notas_50 = valor / 50;
+    valor %= 50;
+
+    notas_10 = valor / 10;
+    valor %= 10;
+
+    notas_5 = valor / 
+}
+
+
+
