@@ -1,0 +1,52 @@
+#include <stdio.h>
+
+int main() {
+   
+    const double preco_acao1 = 24.13;
+    const double preco_acao2 = 11.00;
+    const double preco_acao3 = 38.65;
+
+    const double dividendos_acao1 = 17.00;
+    const double dividendos_acao2 = 35.00;
+    const double dividendos_acao3 = 25.00;
+
+    double valor_total = 1000.00;
+    int quantidade_acao1, quantidade_acao2, quantidade_acao3;
+    double valor_investido_acao1, valor_investido_acao2, valor_investido_acao3;
+    double dy_acao1, dy_acao2, dy_acao3;
+
+    printf("Digite a quantidade de ações 1 que deseja comprar: ");
+    scanf("%d", &quantidade_acao1);
+    
+    printf("Digite a quantidade de ações 2 que deseja comprar: ");
+    scanf("%d", &quantidade_acao2);
+
+    printf("Digite a quantidade de ações 3 que deseja comprar: ");
+    scanf("%d", &quantidade_acao3);
+
+
+    valor_investido_acao1 = quantidade_acao1 * preco_acao1;
+    valor_investido_acao2 = quantidade_acao2 * preco_acao2;
+    valor_investido_acao3 = quantidade_acao3 * preco_acao3;
+
+  
+    dy_acao1 = (dividendos_acao1 / preco_acao1) * 100;
+    dy_acao2 = (dividendos_acao2 / preco_acao2) * 100;
+    dy_acao3 = (dividendos_acao3 / preco_acao3) * 100;
+
+    
+    printf("\nResultados:\n");
+    printf("Ação 1:\n");
+    printf(" - Valor investido: R$ %.2f\n", valor_investido_acao1);
+    printf(" - Dividend Yield (DY): %.2f%%\n", dy_acao1);
+    
+    printf("Ação 2:\n");
+    printf(" - Valor investido: R$ %.2f\n", valor_investido_acao2);
+    printf(" - Dividend Yield (DY): %.2f%%\n", dy_acao2);
+    
+    printf("Ação 3:\n");
+    printf(" - Valor investido: R$ %.2f\n", valor_investido_acao3);
+    printf(" - Dividend Yield (DY): %.2f%%\n", dy_acao3);
+
+    return 0;
+}
