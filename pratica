@@ -1,0 +1,58 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h> 
+
+#define PI 3.14 
+
+int main()
+{
+    float raio, area;
+    printf("Digite o raio \n");
+    scanf("%f", &raio);
+    
+  
+    area = PI * pow(raio, 2);
+    
+    printf("Area total do circulo: %g \n", area);
+
+    return 0;
+}
+
+
+
+#include <stdio.h>
+
+int main()
+{
+    float a;
+    int b;
+    
+  
+    printf("Informe o valor de a: ");
+    scanf("%f", &a);
+    
+  
+    printf("Informe o valor de b: ");
+    scanf("%d", &b);
+    
+  
+    a -= b;
+    printf("a = %.1f\n", a);
+    
+   
+    a *= 4;
+    printf("a = %.1f\n", a);
+    
+    
+    a /= 3;
+    printf("a = %.1f\n", a);
+    
+    a += 2;
+    printf("a = %.1f\n", a);
+    
+    
+    b %= 5;
+    printf("b = %d\n", b);
+
+    return 0;
+}
